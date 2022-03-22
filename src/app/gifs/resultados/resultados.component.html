@@ -1,0 +1,14 @@
+<div class="flex flex-wrap my-12 h-full w-full content-start bg-gray-200 mt-10">
+  <div *ngFor="let resultado of resultados" class=" max-w-md my-12 mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-xl animate__animated animate__fadeInDown">
+    <div class="md:flex">
+      <div class="md:shrink-0">
+        <img class="h-48 w-full object-cover md:h-full md:w-48" [src]="resultado.images.downsized_medium.url" [alt]="resultado.title">
+      </div>
+      <div class="p-8">
+        <div class=" uppercase tracking-wide text-sm text-indigo-500 font-semibold ">{{resultado.title}}</div>
+        <a [href]="resultado.images.downsized_medium.url" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Ir a la imagen</a>
+        <p class="mt-2 text-slate-500">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+      </div>
+    </div>
+  </div>
+</div>
